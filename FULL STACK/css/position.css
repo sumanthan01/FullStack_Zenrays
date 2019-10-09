@@ -1,0 +1,117 @@
+body{
+	margin:0;
+}
+.outer-container{
+	width: 100%;
+	position: relative;
+}
+.main-content{
+	margin-top: 300px;
+	padding: 20px;
+}
+
+.clearfix:before, .clearfix:after{
+	content: "";
+	display: table;
+}
+.clearfix:after{
+	clear:both;
+}
+
+.outer-container>header{
+	padding:10px;
+	background:#222;
+	color: orange;
+	position: fixed;
+	top: 0;
+	left:0;
+	width:150%;
+	height: 266px;
+}
+
+h1{
+	text-indent: -999999999px;
+	margin: 0;
+	padding: 0;
+	background: url(Images/css_logo.jpg) no-repeat 50% 50%;
+	width: 190px;
+	height: 266px;
+	float: left;
+	border-radius: 30px;
+}
+
+nav{
+	width: 50%;
+	float: right;
+}
+nav ul{
+	list-style: none;
+	padding:0;
+}
+nav ul li a{
+	color:yellow;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+nav>ul>li{
+	display: inline-block;
+	border:3px outset #dcdcdc;
+	background:#444;
+	padding: 10px;
+	margin-right: 5px;
+}
+nav>ul>li:last-child{
+	margin-right: 10;
+}
+
+nav .sub-link{
+	position: absolute;
+	top:42px;
+	left:0 ;
+	width: 100px;
+	background:#999;
+	padding: 5px;
+	display: none;
+}
+
+nav .has-child{
+	position: relative;
+}
+nav .has-child:hover .sub-link{
+	display: block;
+}
+nav .sub-link>li{
+	padding: 5px 3px;
+	border-bottom: 2px solid #333;
+}
+nav .sub-link>li>a{
+	color: white;
+}
+nav .sub-link>li:last-child{
+	border-bottom:0 none;
+}
+
+
+.modal{
+	position: absolute;
+	top:500px;
+	left: 500px;
+	background:#ccc;
+	z-index: 20;
+}
+.overlay{
+	width:100%;
+	height: 100%;
+	background:#fff;
+	opacity: 0.8;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+.modal-main>header>button{
+	float:right;
+	width:20%;
+
+}

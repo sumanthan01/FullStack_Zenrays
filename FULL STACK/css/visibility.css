@@ -1,0 +1,6 @@
+figure:first-child img{
+	display:none;
+}
+figure:last-child img{
+	visibility:hidden;
+}
