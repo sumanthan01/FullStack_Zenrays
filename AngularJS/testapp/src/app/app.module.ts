@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Header2Component } from './header2/header2.component';
 import { HeaderChildComponent } from './header/header-child/header-child.component';
+import { Footer1Component } from './footer/footer1/footer1.component';
+import { Footer2Component } from './footer/footer2/footer2.component';
+import { Node1Component } from './header/header_child/node1/node1.component';
+import { Node2Component } from './header/header_child/node2/node2.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { HeaderChildComponent } from './header/header-child/header-child.compone
     HeaderComponent,
     FooterComponent,
     Header2Component,
-    HeaderChildComponent
+    HeaderChildComponent,
+    Footer1Component,
+    Footer2Component,
+    Node1Component,
+    Node2Component
   ],
   imports: [
     BrowserModule,
