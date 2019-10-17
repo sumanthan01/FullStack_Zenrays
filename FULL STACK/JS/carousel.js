@@ -37,13 +37,11 @@
     
         function loopImages(){
             if(forward){
-                //playOrder="Forward";
                 cIndx++;  
                 if(cIndx == carouselItems.length){
                     cIndx = 0;
                 }       
             }else{
-                //playOrder="Reverse";
                 cIndx--;  
                 if(cIndx < 0){
                     cIndx = carouselItems.length - 1;
@@ -90,7 +88,6 @@
         }
         function changePlayOrder(){
             forward = !forward;
-            //order.textContent = "Playing in "+playOrder+" order";
             startInterval();
         }
     
