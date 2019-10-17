@@ -1,0 +1,54 @@
+<head>
+    <title>Carousel</title>
+    <link rel="stylesheet" type="text/css" href="../css/carousel.css"/>
+</head>
+
+<body>
+    <main>
+        <section id="carousel">
+                <section class="slider">
+                        <label class="slide_value"></label>
+                        <label class="slide_value"></label>
+                        <label class="slide_value"></label>
+                        <label class="slide_value"></label>      
+                </section>
+
+        </section>
+        
+            
+    </main>
+    <script>
+        (function(){
+            function carousel(){
+                var cIndx=1,
+                indicatorObj,
+                timerObj;
+                carouselEle = document.getElementById("carousel");
+                indicatorEle = carouselEle.querySelectorAll(".slide_value");
+                function slideLoop(){
+                
+                changeSlides();
+                cIndx++;
+                }
+                function changeSlides()
+                {
+                    for(var i=1;i<indicatorEle.length;i++){
+                        indicatorEle[i].style.backgroundColor = "black"; 
+                    }
+                    indicatorEle[cIndx].style.backgroundColor = "white";
+                    
+                }
+                function startInterval(){
+                    
+                    timerObj = setInterval(slideLoop,1500);
+                }
+                startInterval();
+            }
+            carousel();
+        })();
+    </script>
+
+
+</body>
+
+</html>

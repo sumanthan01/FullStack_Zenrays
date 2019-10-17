@@ -26,7 +26,6 @@
         order,
         imgEle,
         textEle,
-        indicatorObj,
         timerObj,
         cIndx=0,
         playOrder,
@@ -38,13 +37,13 @@
     
         function loopImages(){
             if(forward){
-                playOrder="Forward";
+                //playOrder="Forward";
                 cIndx++;  
                 if(cIndx == carouselItems.length){
                     cIndx = 0;
                 }       
             }else{
-                playOrder="Reverse";
+                //playOrder="Reverse";
                 cIndx--;  
                 if(cIndx < 0){
                     cIndx = carouselItems.length - 1;
@@ -61,6 +60,10 @@
             var imgUrl = "../images/" + carouselItems[cIndx].img;
             imgEle.setAttribute("src",imgUrl);
             textEle.textContent = carouselItems[cIndx].text;
+            for(var i=0;i<indicatorEle.length;i++){
+                indicatorEle[i].style.backgroundColor = "black"; 
+            }
+            indicatorEle[cIndx].style.backgroundColor = "white";
         }
         function startInterval(){
             if(!timerObj)
@@ -69,6 +72,8 @@
         function stopInterval(){
             clearInterval(timerObj);
             timerObj = null;
+            clearInterval(order);
+            order = null;
         }
         function prevSlide(){
             forward=false;
@@ -85,7 +90,7 @@
         }
         function changePlayOrder(){
             forward = !forward;
-            order.textContent = "Playing in "+playOrder+" order";
+            //order.textContent = "Playing in "+playOrder+" order";
             startInterval();
         }
     

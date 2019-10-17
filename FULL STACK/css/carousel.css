@@ -38,7 +38,7 @@
     border-radius: 50%;
     display: inline-block;
     }
-.current_slide{
+.slide_value:first-child{
     background-color:white;
 }    
 .controls{
