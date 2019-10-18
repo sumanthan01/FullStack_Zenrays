@@ -28,6 +28,7 @@
         textEle,
         timerObj,
         cIndx=0,
+        cIndx_prev,
         playOrder,
         carouselEle,
         indicatorEle,
@@ -36,6 +37,7 @@
         carouselEle = document.getElementById("carousel");
     
         function loopImages(){
+            cIndx_prev = cIndx;
             if(forward){
                 cIndx++;  
                 if(cIndx == carouselItems.length){
@@ -58,9 +60,7 @@
             var imgUrl = "../images/" + carouselItems[cIndx].img;
             imgEle.setAttribute("src",imgUrl);
             textEle.textContent = carouselItems[cIndx].text;
-            for(var i=0;i<indicatorEle.length;i++){
-                indicatorEle[i].style.backgroundColor = "black"; 
-            }
+            indicatorEle[cIndx_prev].style.backgroundColor = "black";
             indicatorEle[cIndx].style.backgroundColor = "white";
         }
         function startInterval(){
