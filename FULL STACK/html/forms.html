@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Details</title>
+		<meta charset="utf-8"/>
+		<meta name="contact form" content="contact details of user"/>
+		<style type="text/css">
+			td {
+	  				padding:10px;
+	  				width:340px;
+	  				height:25px;
+				}
+		</style>
+	</head>
+	<body>
+		<h2>Kindly enter your contact details</h2>
+		<form name=contact_info action="location.js">
+			<fieldset>
+				<legend>Contact Details:</legend>
+				<table >
+					<tr>
+						<td><label for="firstname">First Name: *</label></td>
+						<td><p><input type="text" name="firstname" required /> </td>
+					</tr>
+					<tr>
+						<td><label for="lastname">Last Name: *</label></td>
+						<td><p><input type="text" name="lastname" required/> </td>
+					</tr>
+					<tr>
+						<td><label for="Gender">Gender:</label></td>
+						<td>
+							<input type="radio" name="Gender" value="Male"/>Male &nbsp
+							<input type="radio" name="Gender" value="Female"/>Female &nbsp
+							<input type="radio" name="Gender" value="Other"/>Other
+						</td>
+					</tr>
+					<tr>
+						<td><label for="address">Complete Address:</label></td>
+						<td><p><textarea name="address" style="height:50px;width:300px"></textarea> </td>
+					</tr>
+					<tr>
+						<td><label for="loginid">Create your login id: *</label></td>
+						<td><p><input type="text" name="loginid"required/> </td>
+					</tr>
+					<tr>
+						<td><label for="loginpwd">Create your login password: *</label></td>
+						<td><p><input type="password" name="loginpwd"required/> </td>
+					</tr>
+					<tr>
+						<td><label for="info_about_us">How did you get to know about us?</label></td>
+						<td>
+							<input type="checkbox" name="info_about_us" value="Social Media"/>Social Media
+							<input type="checkbox" name="info_about_us" value="Advertisements"/>Advertisements
+							<input type="checkbox" name="info_about_us" value="Friends"/>Friends
+						</td>
+					</tr>
+					<tr>
+						<td><label for="OTP">How would like to receive your OTP?*</label></td>
+						<td><select required>
+								<option></option>
+								<option value="mobile number">Mobile Number</option>
+								<option value="mail_id">Mail id</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td width=340px height=50px align="center">
+							<input type="submit" name="submit" value="Submit" style="width:150px;height:30px;font-weight:bold"/>
+						</td>
+						<td width=340px height=50px align="center">
+							<button  type="reset" name="Clear" style="width:150px;height:30px;font-weight:bold">Clear</button>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><input type="button" name="Cancel" value="Cancel" style="width:150px;height:30px;font-weight:bold"/></td>
+						<!-- need to know if we can use a specific loction for button placement i.e place it a (50,50)-->
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</body>
+</html>

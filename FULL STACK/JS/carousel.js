@@ -23,7 +23,7 @@
         stop,
         next,
         prev,
-        order,
+        order, 
         imgEle,
         textEle,
         timerObj,

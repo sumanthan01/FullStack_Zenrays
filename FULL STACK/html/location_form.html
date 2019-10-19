@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Location Attributes</title>
+        <style>
+            table{
+                visibility: hidden;
+                border: 1px solid black;
+            }
+            tr,th,td{
+                border: 1px solid black;
+            }
+            fieldset{
+                margin:30px;
+            }
+        
+
+        </style>
+        
+    </head>
+    <body>
+
+        <h2>HTML Forms</h2>
+
+        <form id="loc_attributes">
+            <!--FORM NOT SUBMITTING IN THE FIRST TRY AND ALSO TABLE DISAPPERARING -->
+            <fieldset>
+                <legend>Form Contents</legend>
+                <!--//TABL DISAPPEARS AFTER FORM SUBMITTED-->
+                <label>First name:</label>
+                <input type="text" name="firstname"/>
+            
+                <label>Last name:</label>
+                <input type="text" name="lastname">
+
+                <label>Age:</label>
+                <input type="number" name="age"/>
+
+                <label>City:</label>
+                <input type="text" name="city"/>
+                
+                <input type="submit" value="Submit" id="submit"/> 
+            </fieldset>
+        </form> 
+    
+        <fieldset>
+            <legend>Form Attributes</legend>
+            <table id="attributes">
+                <th>Attribute</th>
+                <th>Value</th>
+            </table>
+        </fieldset>
+        <script src="../JS/location.js"></script>
+        
+      
+    </body>
+</html>
