@@ -8,6 +8,7 @@ import { Footer1Component } from './footer/footer1/footer1.component';
 import { Footer2Component } from './footer/footer2/footer2.component';
 import { Node1Component } from './header/header_child/node1/node1.component';
 import { Node2Component } from './header/header_child/node2/node2.component';
+import { AuthGuardGuard } from './auth-guard.guard';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {
     path: 'header',
     component: HeaderComponent,
+    canActivate:[AuthGuardGuard],
     children: [
       {
         path: 'header2',
