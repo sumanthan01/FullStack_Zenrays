@@ -3,30 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { Header2Component } from './header2/header2.component';
-import { HeaderChildComponent } from './header/header-child/header-child.component';
-import { Footer1Component } from './footer/footer1/footer1.component';
-import { Footer2Component } from './footer/footer2/footer2.component';
-import { Node1Component } from './header/header_child/node1/node1.component';
-import { Node2Component } from './header/header_child/node2/node2.component';
+import { Testmodule1Module } from './testmodule1/testmodule1.module';
+import { GreetPipe } from './greet.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    Header2Component,
-    HeaderChildComponent,
-    Footer1Component,
-    Footer2Component,
-    Node1Component,
-    Node2Component
+    GreetPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Testmodule1Module
   ],
   providers: [],
   bootstrap: [AppComponent]
